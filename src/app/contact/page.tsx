@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us — Drasson Home Care",
   description:
-    "Get in touch with Drasson Home Care in Hyde Park, Chicago. Call (708) 704-1346 or email drassoncare@gmail.com for a free consultation.",
+    "Get in touch with Drasson Home Care in Hyde Park, Chicago. Call (708) 704-1346 or email drassonhomecareservices@gmail.com for a free consultation.",
 };
 
 export default function ContactPage() {
@@ -59,7 +59,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="mailto:drassoncare@gmail.com"
+                  href="mailto:drassonhomecareservices@gmail.com"
                   className="flex items-start gap-4 group"
                 >
                   <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-teal-100 transition-colors">
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-teal-900">Email</h3>
                     <p className="text-gray-600 group-hover:text-teal-800 transition-colors">
-                      drassoncare@gmail.com
+                      drassonhomecareservices@gmail.com
                     </p>
                   </div>
                 </a>

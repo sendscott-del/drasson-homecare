@@ -35,11 +35,11 @@ export default function RootLayout({
               (708) 704-1346
             </a>
             <a
-              href="mailto:drassoncare@gmail.com"
+              href="mailto:drassonhomecareservices@gmail.com"
               className="flex items-center gap-2 hover:text-amber-300 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              drassoncare@gmail.com
+              drassonhomecareservices@gmail.com
             </a>
           </div>
         </div>
@@ -162,11 +162,11 @@ export default function RootLayout({
                     (708) 704-1346
                   </a>
                   <a
-                    href="mailto:drassoncare@gmail.com"
+                    href="mailto:drassonhomecareservices@gmail.com"
                     className="flex items-center gap-2 text-teal-50/80 hover:text-amber-300 transition-colors"
                   >
                     <Mail className="w-4 h-4" />
-                    drassoncare@gmail.com
+                    drassonhomecareservices@gmail.com
                   </a>
                   <p className="text-teal-50/80">Hyde Park, Chicago, IL</p>
                 </div>

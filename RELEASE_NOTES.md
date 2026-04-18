@@ -1,5 +1,8 @@
 # Drasson Home Care — Release Notes
 
+## v1.0.1 — April 18, 2026
+- Updated contact email to drassonhomecareservices@gmail.com across all pages (header, footer, contact page)
+
 ## v1.0.0 — April 18, 2026
 
 ### Initial Launch
