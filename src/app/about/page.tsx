@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us — Drasson Home Care",
+  title: "About Us — Drasson Home Care Services",
   description:
-    "Learn about Drasson Home Care, a CNA-licensed home care provider in Hyde Park, Chicago, rooted in Nigerian cultural values of elder respect and dignity.",
+    "Learn about Drasson Home Care Services — over 7 years of hands-on caregiving and CNA experience providing compassionate home care in Hyde Park and surrounding areas.",
 };
 
 const values = [
@@ -21,36 +21,36 @@ const values = [
     icon: Heart,
     title: "Compassion First",
     description:
-      "Every interaction is guided by genuine care and empathy. We treat each client as family.",
+      "We treat every client like family, guided by genuine care, kindness, and empathy in every visit.",
   },
   {
     icon: Shield,
     title: "Dignity & Respect",
     description:
-      "Rooted in Nigerian cultural values, we believe elders deserve the highest honor and respect.",
+      "Every client deserves to be treated with the dignity and respect they have earned over a lifetime.",
   },
   {
     icon: Users,
-    title: "Community Focus",
+    title: "Trusted & Reliable",
     description:
-      "Based in Hyde Park, we are committed to strengthening and serving our local community.",
+      "With over 7 years of hands-on caregiving experience, families trust us to show up when it matters.",
   },
   {
     icon: Home,
-    title: "Independence at Home",
+    title: "Comfort of Home",
     description:
-      "We help clients maintain their independence and quality of life in the comfort of their own home.",
+      "We help clients remain safe, comfortable, and independent in the place they love most — home.",
   },
 ];
 
 const services = [
-  "Companionship and social engagement",
-  "Personal care — bathing, grooming, and dressing assistance",
-  "Nutritious meal preparation based on dietary needs",
-  "Light housekeeping and home organization",
-  "Medication reminders and health monitoring",
-  "Escort to medical and personal appointments",
-  "Specialized dementia and memory care support",
+  "Personal care — bathing, grooming, dressing, and toileting",
+  "Companion care — conversation, emotional support, games",
+  "Meal preparation and nutritious home-cooked meals",
+  "Light housekeeping, laundry, and errands",
+  "Mobility support — walking, fall prevention, transfers",
+  "Dementia and Alzheimer's care",
+  "Support for seniors with memory loss",
   "Respite care for family caregivers",
 ];
 
@@ -62,10 +62,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              Drasson Homecare
+              About Drasson Home Care Services
             </h1>
             <p className="text-xl md:text-2xl text-teal-50/90 leading-relaxed">
-              Your trusted source for compassionate and reliable care.
+              Founded with a passion for helping others — providing
+              compassionate, high-quality home care to our community.
             </p>
           </div>
         </div>
@@ -81,42 +82,35 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Drasson Home Care was founded by a CNA-licensed caregiver
-                  based in the heart of Hyde Park, Chicago. Driven by a deep
-                  commitment to community care and inspired by Nigerian cultural
-                  values that place the highest importance on respect for elders,
-                  we set out to create a home care service that goes beyond
-                  clinical tasks.
+                  Drasson Home Care Services was founded with a passion for
+                  helping others. With over 7 years of hands-on caregiving and
+                  CNA experience, we understand the needs of seniors and their
+                  families.
                 </p>
                 <p>
-                  In our culture, caring for our elders is not just a duty
-                  &mdash; it is an honor. We carry this belief into every home
-                  we serve, ensuring that each client is treated with the
-                  dignity, warmth, and respect they deserve. We use compassion
-                  over clinical terminology, focusing on the person rather than
-                  the condition.
+                  We are committed to providing high-quality, compassionate
+                  care that allows our clients to remain in the comfort of
+                  their homes — safe, supported, and surrounded by the people
+                  and places they love.
                 </p>
                 <p>
-                  Our mission is simple: to help every client maintain their
-                  dignity, independence, and quality of life in the comfort of
-                  their own home, while building trustworthy relationships that
-                  families can rely on.
+                  Your loved one&apos;s safety, comfort, and happiness are our
+                  top priority.
                 </p>
               </div>
             </div>
             <div className="bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-8 md:p-10">
               <h3 className="text-xl font-bold text-teal-900 mb-4">
-                Our Mission
+                Our Promise
               </h3>
               <p className="text-gray-700 leading-relaxed mb-6">
-                To provide compassionate, dignified, and reliable home care that
-                empowers older adults and individuals with disabilities to thrive
-                in the comfort of their own homes, building relationships
-                founded on trust, respect, and genuine care.
+                At Drasson Home Care Services, we treat every client like
+                family. Our goal is to provide quality care with respect,
+                dignity, and kindness — 24 hours a day, 7 days a week.
               </p>
               <div className="flex items-center gap-3 text-amber-600 font-semibold">
                 <Heart className="w-5 h-5 fill-amber-500 text-amber-500" />
-                Dignity over clinical terminology
+                Every client is family
               </div>
             </div>
           </div>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Globe } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us — Drasson Home Care",
   description:
-    "Get in touch with Drasson Home Care in Hyde Park, Chicago. Call (708) 704-1346 or email drassonhomecareservices@gmail.com for a free consultation.",
+    "Get in touch with Drasson Home Care Services in Hyde Park and surrounding areas. Call (708) 704-1346 or email drassoncare@gmail.com for a FREE consultation.",
 };
 
 export default function ContactPage() {
@@ -59,7 +59,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="mailto:drassonhomecareservices@gmail.com"
+                  href="mailto:drassoncare@gmail.com"
                   className="flex items-start gap-4 group"
                 >
                   <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-teal-100 transition-colors">
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-teal-900">Email</h3>
                     <p className="text-gray-600 group-hover:text-teal-800 transition-colors">
-                      drassonhomecareservices@gmail.com
+                      drassoncare@gmail.com
                     </p>
                   </div>
                 </a>
@@ -78,10 +78,27 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-teal-800" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-teal-900">Location</h3>
-                    <p className="text-gray-600">Hyde Park, Chicago, IL</p>
+                    <h3 className="font-semibold text-teal-900">Service Area</h3>
+                    <p className="text-gray-600">
+                      Hyde Park and surrounding areas, Chicago, IL
+                    </p>
                   </div>
                 </div>
+
+                <a
+                  href="https://www.drassonhomecare.com"
+                  className="flex items-start gap-4 group"
+                >
+                  <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-teal-100 transition-colors">
+                    <Globe className="w-5 h-5 text-teal-800" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-teal-900">Website</h3>
+                    <p className="text-gray-600 group-hover:text-teal-800 transition-colors">
+                      www.drassonhomecare.com
+                    </p>
+                  </div>
+                </a>
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center shrink-0">

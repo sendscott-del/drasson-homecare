@@ -6,16 +6,17 @@ import {
   Home,
   ShoppingBag,
   Moon,
+  Footprints,
+  Brain,
   CalendarHeart,
   ArrowRight,
   Phone,
-  AlertCircle,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services & Pricing — Drasson Home Care",
+  title: "Services & Pricing — Drasson Home Care Services",
   description:
-    "View our home care services and pricing. Personal care, companionship, support services, household logistics, and overnight care in Hyde Park, Chicago.",
+    "View our home care services and pricing. Personal care, companion care, daily living assistance, mobility support, and specialized dementia care in Hyde Park and surrounding areas.",
 };
 
 const services = [
@@ -28,48 +29,61 @@ const services = [
     details: [
       "Bathing and showering assistance",
       "Grooming and personal hygiene",
-      "Dressing and wardrobe selection",
-      "Toileting assistance",
-      "Mobility support and transfers",
+      "Dressing assistance",
+      "Toileting support",
       "Skin care and comfort measures",
     ],
   },
   {
     icon: Heart,
-    title: "Companionship & Social Engagement",
+    title: "Companion Care",
     price: "$25/hour",
     description:
       "Meaningful connection and social interaction to combat loneliness and keep spirits high.",
     details: [
       "Friendly conversation and active listening",
+      "Emotional support",
       "Games, puzzles, and recreational activities",
       "Reading and shared hobbies",
       "Walks and outdoor activities",
-      "Technology assistance for video calls with family",
-      "Dementia and memory care support",
+      "Technology help for video calls with family",
     ],
   },
   {
     icon: Home,
-    title: "Support Services",
+    title: "Daily Living Assistance",
     price: "$25/hour",
     description:
-      "Help maintaining a clean, comfortable, and safe living environment along with nutritious home-cooked meals.",
+      "Help maintaining a clean, comfortable home along with nutritious home-cooked meals and everyday support.",
     details: [
+      "Meal planning and preparation",
       "Light housekeeping and tidying",
       "Laundry and linen changes",
-      "Meal planning and preparation",
       "Kitchen cleanup and dishwashing",
       "Medication reminders",
       "Mail sorting and light organization",
     ],
   },
   {
+    icon: Footprints,
+    title: "Mobility Support",
+    price: "$25/hour",
+    description:
+      "Safe, confident movement around the home and community — helping clients stay active and prevent falls.",
+    details: [
+      "Walking assistance",
+      "Fall prevention",
+      "Transfer assistance (bed, chair, vehicle)",
+      "Range-of-motion support",
+      "Safe movement around the home",
+    ],
+  },
+  {
     icon: ShoppingBag,
-    title: "Household Logistics",
+    title: "Errands & Appointments",
     price: "$28/hour",
     description:
-      "Running errands and managing tasks outside the home so clients and families can focus on what matters most.",
+      "Running errands and escorting to appointments so clients and families can focus on what matters most.",
     details: [
       "Grocery shopping and delivery",
       "Prescription pickup",
@@ -77,6 +91,21 @@ const services = [
       "Escort to personal appointments and social events",
       "Banking and post office errands",
       "General errands and tasks",
+    ],
+  },
+  {
+    icon: Brain,
+    title: "Specialized Dementia Care",
+    price: "$30/hour",
+    description:
+      "Patient, trained support for clients living with dementia, Alzheimer's, or memory loss — rooted in compassion.",
+    details: [
+      "Dementia and Alzheimer's care",
+      "Memory loss support",
+      "Structured routines and gentle redirection",
+      "Safety supervision",
+      "Emotional reassurance and calm presence",
+      "Family caregiver guidance",
     ],
   },
   {
@@ -108,8 +137,9 @@ export default function ServicesPage() {
               Our Services & Pricing
             </h1>
             <p className="text-xl text-teal-50/90 leading-relaxed">
-              Transparent pricing for quality home care. Every service is
-              delivered with the compassion and dignity your loved one deserves.
+              Transparent pricing for quality, non-medical home care. Every
+              service is delivered with compassion and dignity — 24 hours a
+              day, 7 days a week.
             </p>
           </div>
         </div>
