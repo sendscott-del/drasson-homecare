@@ -1,5 +1,8 @@
 # Drasson Home Care — Release Notes
 
+## v1.1.1 — April 23, 2026
+- Replaced caregiver + client placeholder with the AI-generated photo supplied by the owner (`public/caregiver-client.png`). Removed the temporary SVG placeholder and updated the homepage image tag. Filename normalized to lowercase to avoid case-sensitivity issues on Vercel's Linux build.
+
 ## v1.1.0 — April 23, 2026
 
 ### Content refresh from owner (Abiola)

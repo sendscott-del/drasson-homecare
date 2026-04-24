@@ -130,7 +130,7 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-teal-50 to-amber-50 aspect-[16/9] md:aspect-[21/9] relative">
             <img
-              src="/caregiver-client.svg"
+              src="/caregiver-client.png"
               alt="A Drasson Home Care caregiver sharing a warm moment with a senior client"
               className="w-full h-full object-cover"
             />
