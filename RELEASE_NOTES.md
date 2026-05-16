@@ -1,5 +1,18 @@
 # Drasson Home Care — Release Notes
 
+## v1.2.1 — May 16, 2026
+
+### Contact page: removed the form, made direct contact prominent
+- Removed the "Send Us a Message" form entirely. Setting up reliable email delivery from the form was friction (Gmail SMTP / app-password authentication kept failing); a direct phone/text/email approach is simpler and gets leads to Drasson faster.
+- Contact page now leads with three big action buttons:
+  - **Call us** → `tel:` link, opens phone dialer
+  - **Text us** → `sms:` link, opens messaging app pre-addressed to (708) 704-1346
+  - **Email us** → `mailto:` link, opens email client to drassoncare@gmail.com
+- Service Area, Availability, and Website moved to a smaller secondary row below the CTAs.
+- Removed now-unused files: `src/app/contact/ContactForm.tsx`, `src/app/api/contact/route.ts`.
+- Removed `nodemailer` and `@types/nodemailer` from dependencies.
+- The Vercel env vars `GMAIL_USER`, `GMAIL_APP_PASSWORD`, and `CONTACT_RECIPIENT` are no longer used — Scott to revoke the Gmail app password and remove these vars to keep things clean.
+
 ## v1.2.0 — May 16, 2026
 
 ### Contact form now actually sends email
