@@ -1,17 +1,54 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("sending");
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      message: String(data.get("message") ?? ""),
+      website: String(data.get("website") ?? ""),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        error?: string;
+      };
+      if (!res.ok || !result.ok) {
+        throw new Error(result.error ?? "Something went wrong. Please try again.");
+      }
+      setStatus("sent");
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.",
+      );
+    }
   }
 
-  if (submitted) {
+  if (status === "sent") {
     return (
       <div className="text-center py-12">
         <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -27,8 +64,22 @@ export default function ContactForm() {
     );
   }
 
+  const sending = status === "sending";
+
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot field — hidden from real users, bots will fill it */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label
@@ -94,12 +145,21 @@ export default function ContactForm() {
           placeholder="Tell us about your care needs or ask us a question..."
         />
       </div>
+
+      {status === "error" && (
+        <div className="flex items-start gap-2 rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-800">
+          <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
+          <span>{errorMessage}</span>
+        </div>
+      )}
+
       <button
         type="submit"
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-teal-900 text-white px-8 py-3 rounded-lg hover:bg-teal-800 transition-colors font-semibold text-lg"
+        disabled={sending}
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-teal-900 text-white px-8 py-3 rounded-lg hover:bg-teal-800 transition-colors font-semibold text-lg disabled:opacity-60 disabled:cursor-not-allowed"
       >
         <Send className="w-5 h-5" />
-        Send Message
+        {sending ? "Sending…" : "Send Message"}
       </button>
     </form>
   );

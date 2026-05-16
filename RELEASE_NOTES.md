@@ -1,5 +1,19 @@
 # Drasson Home Care — Release Notes
 
+## v1.2.0 — May 16, 2026
+
+### Contact form now actually sends email
+- Previously the "Send Message" button only showed a thank-you screen — submissions were silently discarded.
+- New API route at `src/app/api/contact/route.ts` uses Gmail SMTP via `nodemailer` to deliver every submission to `drassoncare@gmail.com` (override with `CONTACT_RECIPIENT` env var).
+- `Reply-To` header is set to the submitter's email so replying from Gmail goes straight to the lead.
+- Added a hidden honeypot field (`website`) to silently drop bot submissions.
+- Sending state, error display, and disabled button while submitting.
+- **Required Vercel env vars** (Production + Preview):
+  - `GMAIL_USER` — the Gmail account doing the sending (e.g. `drassoncare@gmail.com`)
+  - `GMAIL_APP_PASSWORD` — 16-char Gmail app password (requires 2-step verification turned on for that Gmail account; generate at https://myaccount.google.com/apppasswords)
+  - `CONTACT_RECIPIENT` — optional, defaults to `drassoncare@gmail.com`
+- Until these env vars are set in Vercel, the form will show "Email is not configured. Please try calling us instead."
+
 ## v1.1.1 — April 23, 2026
 - Replaced caregiver + client placeholder with the AI-generated photo supplied by the owner (`public/caregiver-client.png`). Removed the temporary SVG placeholder and updated the homepage image tag. Filename normalized to lowercase to avoid case-sensitivity issues on Vercel's Linux build.
 
