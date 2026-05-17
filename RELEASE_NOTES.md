@@ -1,5 +1,18 @@
 # Drasson Home Care — Release Notes
 
+## v1.2.2 — May 17, 2026
+
+### Site-wide QA pass — bug fixes and polish
+
+**Functional bug (the important one):**
+- **Mobile menu would stay open after navigating to a new page.** Clicking About/Services/Contact in the hamburger menu navigated correctly but the dropdown overlay didn't close, blocking the page content on the next screen. The previous `onClick={() => setIsOpen(false)}` on each Link lost a race against Next.js client-side navigation. Rewrote `MobileNav.tsx` to derive `isOpen` from a `openedAtPath` state compared with `usePathname()` — when the route changes, the menu becomes closed by definition, no race condition. Verified across all four nav links.
+
+**Polish:**
+- Standardized every `tel:` link site-wide to `tel:+17087041346` (was a mix of `tel:7087041346` and `tel:+17087041346`). The `+1` form is the correct RFC 3966 format and behaves more reliably on iOS and Android. Matches the existing `sms:+17087041346` on the contact page.
+- Removed the circular `www.drassonhomecare.com` link from the contact page secondary info — clicking it just reloaded the same page the user was already on. Secondary info grid collapsed from 3 to 2 columns (Service Area, Availability).
+- Swapped the homepage caregiver-and-client photo from `<img>` to Next.js `<Image fill>` so the image is auto-optimized to multiple sizes (WebP/AVIF), lazy-loaded properly, and avoids the "slower LCP" warning.
+- Cleaned up unused imports: `Menu`/`X` in `layout.tsx`, `Home` in `page.tsx`, `Globe` in `contact/page.tsx`, and the unused `index` parameter in the services map. Lint output is now zero warnings, zero errors.
+
 ## v1.2.1 — May 16, 2026
 
 ### Contact page: removed the form, made direct contact prominent

@@ -194,7 +194,7 @@ export default function AboutPage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:7087041346"
+              href="tel:+17087041346"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg"
             >
               <Phone className="w-5 h-5" />

@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Heart,
   Bath,
   UtensilsCrossed,
-  Home,
   Footprints,
   Brain,
   Users,
@@ -114,7 +114,7 @@ export default function HomePage() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
-                href="tel:7087041346"
+                href="tel:+17087041346"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg"
               >
                 <Phone className="w-5 h-5" />
@@ -129,10 +129,12 @@ export default function HomePage() {
       <section className="bg-white py-12 md:py-16">
         <div className="max-w-5xl mx-auto px-4">
           <div className="rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-teal-50 to-amber-50 aspect-[16/9] md:aspect-[21/9] relative">
-            <img
+            <Image
               src="/caregiver-client.png"
               alt="A Drasson Home Care caregiver sharing a warm moment with a senior client"
-              className="w-full h-full object-cover"
+              fill
+              sizes="(min-width: 768px) 1024px, 100vw"
+              className="object-cover"
             />
           </div>
           <p className="text-center text-gray-500 text-sm mt-4 italic">
@@ -280,7 +282,7 @@ export default function HomePage() {
               we will be happy to assist.
             </p>
             <a
-              href="tel:7087041346"
+              href="tel:+17087041346"
               className="inline-flex items-center gap-2 mt-6 bg-teal-900 text-white px-6 py-3 rounded-lg hover:bg-teal-800 transition-colors font-semibold"
             >
               <Phone className="w-5 h-5" />
@@ -340,7 +342,7 @@ export default function HomePage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:7087041346"
+              href="tel:+17087041346"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg"
             >
               <Phone className="w-5 h-5" />

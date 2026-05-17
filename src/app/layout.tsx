@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Link from "next/link";
-import { Phone, Mail, Menu, X } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import "./globals.css";
 import MobileNav from "./MobileNav";
 
@@ -28,7 +28,7 @@ export default function RootLayout({
         <div className="bg-teal-900 text-white text-sm">
           <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
             <a
-              href="tel:7087041346"
+              href="tel:+17087041346"
               className="flex items-center gap-2 hover:text-amber-300 transition-colors"
             >
               <Phone className="w-4 h-4" />
@@ -155,7 +155,7 @@ export default function RootLayout({
                 <h3 className="font-semibold text-lg mb-4">Get in Touch</h3>
                 <div className="space-y-3 text-sm">
                   <a
-                    href="tel:7087041346"
+                    href="tel:+17087041346"
                     className="flex items-center gap-2 text-teal-50/80 hover:text-amber-300 transition-colors"
                   >
                     <Phone className="w-4 h-4" />

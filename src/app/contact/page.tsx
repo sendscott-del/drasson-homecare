@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Phone,
-  MessageSquare,
-  Mail,
-  MapPin,
-  Clock,
-  Globe,
-} from "lucide-react";
+import { Phone, MessageSquare, Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us — Drasson Home Care",
@@ -35,7 +28,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <a
-              href="tel:7087041346"
+              href="tel:+17087041346"
               className="group flex flex-col items-center text-center bg-teal-900 text-white rounded-2xl p-8 hover:bg-teal-800 transition-colors shadow-sm"
             >
               <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
@@ -80,7 +73,7 @@ export default function ContactPage() {
           </div>
 
           {/* Secondary info */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div className="flex items-start gap-3">
               <div className="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center shrink-0">
                 <MapPin className="w-5 h-5 text-teal-800" />
@@ -105,21 +98,6 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-
-            <a
-              href="https://www.drassonhomecare.com"
-              className="flex items-start gap-3 group"
-            >
-              <div className="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-teal-100 transition-colors">
-                <Globe className="w-5 h-5 text-teal-800" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-teal-900">Website</h3>
-                <p className="text-gray-600 text-sm group-hover:text-teal-800 transition-colors">
-                  www.drassonhomecare.com
-                </p>
-              </div>
-            </a>
           </div>
         </div>
       </section>

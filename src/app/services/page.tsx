@@ -149,7 +149,7 @@ export default function ServicesPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="space-y-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.title}
                 className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden"
@@ -248,7 +248,7 @@ export default function ServicesPage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:7087041346"
+              href="tel:+17087041346"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg"
             >
               <Phone className="w-5 h-5" />
